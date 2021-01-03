@@ -8,8 +8,7 @@ from keras.models import Model
 from keras.layers import regularizers, BatchNormalization, advanced_activations, Conv2DTranspose, Input, concatenate, Conv2D, MaxPooling2D, UpSampling2D, core
 from keras.callbacks import ModelCheckpoint, LearningRateScheduler
 from keras.optimizers import SGD
-from help_functions import *
-from extract_patches import *
+from help import *
 from typing import Any, Union
 import os, sys
 
