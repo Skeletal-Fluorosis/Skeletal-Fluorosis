@@ -12,7 +12,9 @@ Some auxiliary functions.
 4)pre_processing.py
 Some preprocessing of contrast enhancement.
 5)train
+Train and save the best model.
 6)test
+Generate results through the best model.
 
 3.Stage_2.py
-This stage realizes classification. The inputs are the original images and the corresponding segmentation results.
+This stage realizes classification. The inputs are the original images and the corresponding segmentation results. Train and test processes are written in the same program.
