@@ -1,8 +1,8 @@
 1.rotate_crop.py
-The original image is processed preliminarily. The image is rotated horizontally and the key parts are retained
+The original image is processed preliminarily. The image is rotated horizontally and the key parts are retained.
 
 2.Stage_1
-Segmentation of lesion region in X-ray images.
+This stage realizes the segmentation of lesion region in X-ray images.
 1)configuration.txt
 Some parameters in the process of training.
 2)datasets.py
@@ -15,4 +15,4 @@ Some preprocessing of contrast enhancement.
 6)test
 
 3.Stage_2.py
-The program realizes classification. The inputs are the original images and the corresponding segmentation results.
+This stage realizes classification. The inputs are the original images and the corresponding segmentation results.
