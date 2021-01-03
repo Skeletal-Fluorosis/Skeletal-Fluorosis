@@ -12,8 +12,8 @@ def write_hdf5(arr,outfile):
 
 Nimgs = 40
 channels = 3
-height = 500
-width = 750
+height = 512
+width = 768
 dataset_path = "./datasets/"
 
 def get_datasets(imgs_dir: object, groundTruth_dir: object, borderMasks_dir: object, train_test: object = "null") -> object:
@@ -66,16 +66,14 @@ def get_datasets(imgs_dir: object, groundTruth_dir: object, borderMasks_dir: obj
 
 if not os.path.exists(dataset_path):
     os.makedirs(dataset_path)
-#getting the training datasets
 imgs_train, groundTruth_train, border_masks_train = get_datasets(original_imgs_train,groundTruth_imgs_train,borderMasks_imgs_train,"train")
 print ("saving train datasets")
-write_hdf5(imgs_train, dataset_path + "DRIVE_dataset_imgs_train.hdf5")
-write_hdf5(groundTruth_train, dataset_path + "DRIVE_dataset_groundTruth_train.hdf5")
-write_hdf5(border_masks_train,dataset_path + "DRIVE_dataset_borderMasks_train.hdf5")
+write_hdf5(imgs_train, dataset_path + "dataset_imgs_train.hdf5")
+write_hdf5(groundTruth_train, dataset_path + "dataset_groundTruth_train.hdf5")
+write_hdf5(border_masks_train,dataset_path + "dataset_borderMasks_train.hdf5")
 
-#getting the testing datasets
 imgs_test, groundTruth_test, border_masks_test = get_datasets(original_imgs_test,groundTruth_imgs_test,borderMasks_imgs_test,"test")
 print ("saving test datasets")
-write_hdf5(imgs_test,dataset_path + "DRIVE_dataset_imgs_test.hdf5")
-write_hdf5(groundTruth_test, dataset_path + "DRIVE_dataset_groundTruth_test.hdf5")
-write_hdf5(border_masks_test,dataset_path + "DRIVE_dataset_borderMasks_test.hdf5")
+write_hdf5(imgs_test,dataset_path + "dataset_imgs_test.hdf5")
+write_hdf5(groundTruth_test, dataset_path + "dataset_groundTruth_test.hdf5")
+write_hdf5(border_masks_test,dataset_path + "dataset_borderMasks_test.hdf5")
